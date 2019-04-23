@@ -22,7 +22,7 @@ pipelines:
       #           AWS_ACCESS_KEY_ID: $AWS_ACCESS
       #           AWS_SECRET_ACCESS_KEY: $AWS_SECRET
       #           AWS_DEFAULT_REGION: "us-east-1"
-      #           S3_BUCKET: "app-test.discovercannabis.us"
+      #           S3_BUCKET: "app-test.twentynineteen.me"
       #           LOCAL_PATH: "build"
       #           ACL: "public-read"
       # - step:
@@ -30,7 +30,7 @@ pipelines:
       #     script: 
       #       - pipe: docker://jamesvsshark/dc-acceptance-tests:latest
       #         variables:
-      #             TEST_URL: "http://app-test.discovercannabis.us"
+      #             TEST_URL: "http://app-test.twentynineteen.me"
   branches:
       master:
         - step:
@@ -64,6 +64,6 @@ pipelines:
         #           AWS_ACCESS_KEY_ID: $AWS_ACCESS
         #           AWS_SECRET_ACCESS_KEY: $AWS_SECRET
         #           AWS_DEFAULT_REGION: "us-east-1"
-        #           S3_BUCKET: "app.discovercannabis.us"
+        #           S3_BUCKET: "app.twentynineteen.me"
         #           LOCAL_PATH: "build"
         #           ACL: "public-read"
