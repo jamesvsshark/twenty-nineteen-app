@@ -1,0 +1,69 @@
+image: node:10-alpine
+
+pipelines:
+  pull-requests:
+    '**':
+      - step:
+          name: Build and Unit tests
+          caches:
+            - node
+          script:
+            - npm install
+            - npm test
+            - npm run-script build
+          artifacts:
+            - build/**
+      # - step:
+      #     name: Deploy Testing Env
+      #     deployment: test
+      #     script:
+      #       - pipe: atlassian/aws-s3-deploy:0.2.1
+      #         variables:
+      #           AWS_ACCESS_KEY_ID: $AWS_ACCESS
+      #           AWS_SECRET_ACCESS_KEY: $AWS_SECRET
+      #           AWS_DEFAULT_REGION: "us-east-1"
+      #           S3_BUCKET: "app-test.discovercannabis.us"
+      #           LOCAL_PATH: "build"
+      #           ACL: "public-read"
+      # - step:
+      #     name: e2e Tests
+      #     script: 
+      #       - pipe: docker://jamesvsshark/dc-acceptance-tests:latest
+      #         variables:
+      #             TEST_URL: "http://app-test.discovercannabis.us"
+  branches:
+      master:
+        - step:
+            name: Build
+            caches:
+              - node
+            script:
+              - npm install
+              - npm run-script build
+            artifacts:
+              - build/**
+        - step:
+            name: Deploy to s3
+            deployment: staging
+            script:
+              - pipe: atlassian/aws-s3-deploy:0.2.1
+                variables:
+                  AWS_ACCESS_KEY_ID: $AWS_ACCESS
+                  AWS_SECRET_ACCESS_KEY: $AWS_SECRET
+                  AWS_DEFAULT_REGION: "us-east-1"
+                  S3_BUCKET: "app.twentynineteen.me"
+                  LOCAL_PATH: "build"
+                  ACL: "public-read"
+        # - step:
+        #     name: Deploy to s3 production
+        #     deployment: production
+        #     trigger: manual
+        #     script:
+        #       - pipe: atlassian/aws-s3-deploy:0.2.1
+        #         variables:
+        #           AWS_ACCESS_KEY_ID: $AWS_ACCESS
+        #           AWS_SECRET_ACCESS_KEY: $AWS_SECRET
+        #           AWS_DEFAULT_REGION: "us-east-1"
+        #           S3_BUCKET: "app.discovercannabis.us"
+        #           LOCAL_PATH: "build"
+        #           ACL: "public-read"
