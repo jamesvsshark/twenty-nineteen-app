@@ -1,0 +1,17 @@
+{
+  "palette": {
+    "primary": {
+      "light": "#6BE489",
+      "main": "#1BD191",
+      "dark": "#00915E"
+    },
+    "secondary": {
+      "light": "#FFC878",
+      "main": "#F5A623",
+      "dark": "#D98100"
+    }
+  },
+  "typography": {
+    "useNextVariants": true
+  }
+}
