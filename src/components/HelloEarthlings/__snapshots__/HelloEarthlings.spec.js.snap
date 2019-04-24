@@ -143,7 +143,7 @@ exports[`HelloEarthlings: should render a modal when the login button is clicked
             <p
               class="MuiTypography-root-59 MuiTypography-body1-68 MuiTypography-gutterBottom-86 MuiTypography-paragraph-87 MuiTypography-alignCenter-82"
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consectetur odio diam, eleifend condimentum ipsum rutrum at. Vestibulum eget ornare lacus. Vivamus varius nulla at purus lacinia, in vehicula nibh ultricies. Nam vel mi et nulla posuere semper. Suspendisse urna risus, auctor a lectus dapibus, condimentum eleifend augue. Cras nec ornare sem. Maecenas efficitur purus in faucibus sagittis. Aenean sagittis est odio, at maximus nisi volutpat a. Aliquam aliquet aliquet ligula, in aliquet mi pulvinar id. Vivamus cursus nunc ut ornare pretium. Duis ut ligula purus. Nunc posuere dapibus commodo. Sed felis turpis, ornare in feugiat ac, ullamcorper quis nibh.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consectetur odio diam, eleifend condimentum ipsum rutrum at. Vestibulum eget ornare lacus. Vivamus varius nulla at purus lacinia, in vehicula nibh ultricies. Nam vel mi et nulla posuere semper. Suspendisse urna risus, auctor a lectus dapibus, condimentum eleifend augue. Cras nec ornare sem. Maecenas efficitur purus in faucibus sagittis. Aenean sagittis est odio, at maximus nisi volutpat a. Aliquam aliquet aliquet ligula. In aliquet mi pulvinar id. Vivamus cursus nunc ut ornare pretium. Duis ut ligula purus. Nunc posuere dapibus commodo. Sed felis turpis, ornare in feugiat ac, ullamcorper quis nibh.
             </p>
           </section>
         </div>
