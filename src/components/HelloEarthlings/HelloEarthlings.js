@@ -22,7 +22,7 @@ export function HelloEarthlings() {
   const [isDialogOpen, toggleDialog] = useState(false);
 
   function handleLoginClick() {
-    toggleDialog(prevIsDialogOpen => !prevIsDialogOpen);
+    // toggleDialog(prevIsDialogOpen => !prevIsDialogOpen);
   }
 
   const useStylesForApp = makeStyles({
